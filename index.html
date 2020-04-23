@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de sequência</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta name="description" content="Divida uma sequência númerica em duas sequências baseado em um número" />
+    <meta name="keywords" content="sequências, números, numérico, impar e par, impressão, dividir pdf" />
+    <meta name="robots" content="index">
+</head>
+<body>
+<main>
+    <h1>Divisor de sequência:</h1>
+    <p>
+        A função desse divisor de sequência é receber uma sequência numérica e separa os números de n em n para duas
+        sequências diferentes, onde os elementos da primeira nunca serão os elementos da segunda!
+    </p>
+    <p>
+        Tome por exemplo a sequência: 1,2,3,4,5,6,7,8 dividida de 2 em 2
+    </p>
+    <p>
+        Essa sequência gerará duas outras sequências
+    </p>
+    <p>A sequência 1: 1, 2, 5, 6</p>
+    <p>E a sequência 2: 3, 4, 7, 8</p>
+
+    <h2>Como usar:</h2>
+    <p>Insira uma lista de números qualquer separados entre vírgula: 1, 3, 8, 15</p>
+    <p>Insira um intervalo de números: 1-5</p>
+    <form>
+        <input type="text" id="sequencia" placeholder="Sua sequência">
+        <input type="number" id="numero" placeholder="quanto em quanto">
+        <button id="botao">Dividir lista</button>
+    </form>
+
+    <section>
+        <p id="lista1"><span class="lista">Primeira lista:</span></p>
+        <p id="lista2"><span class="lista">Segunda lista:</span></p>
+    </section>
+
+    <h2>Algumas utilidades do divisor:</h2>
+    <ul>
+        <li>Criar sequências de impar ou par</li>
+        <li>Dividir sequências de páginas para utilizar em impressoras que não imprimam de ambos os lados</li>
+    </ul>
+    <script src="index.js"></script>
+</main>
+</body>
+</html>
