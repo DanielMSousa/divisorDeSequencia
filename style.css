@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(46, 46, 46);
+    font-family: 'Roboto Slab', serif;
+}
+h1, h2{
+    margin-bottom: 1.5%;
+}
+p, li{
+    font-size: 1.1em;
+    text-indent: 15px;
+    margin: 1.1%;
+    line-height: 1.5em;
+    text-align: justify;
+}
+body{
+    background-color: #dadaf2;
+}
+main{
+    width: 70%;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    padding: 1% 5%;
+    min-height: 100vh;
+}
+input, button{
+    font-size: 1.1em;
+    padding: 0.5%;
+}
+section{
+    margin: 25px 0;
+}
+button{
+    cursor: pointer;
+    font-weight: bold;
+}
+.lista{
+    text-decoration: underline;
+}
+#lista1, #lista2{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+@media screen and (max-width: 960px){
+    main{
+        width: 100%;
+    }
+}
