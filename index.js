@@ -1,3 +1,4 @@
+//FUNÇÕES
 function formarSequencia(a, b){
     array = [];
     array.push(a);
@@ -6,6 +7,8 @@ function formarSequencia(a, b){
     }
     return array;
 }
+
+const conta = (item1, item2) => [item1.length, item2.length];
 
 const parEImpar = itens => {
     //Filtra entre as listas
@@ -54,21 +57,23 @@ function sequencia(numeros, n){
     //os itens da array interna na array primária
     b = subParaArray(ArraySequencias);
 
-    //Divide os itens da array entre duas listas da seguinte forma:
-    //ex: separar([1, 2, 3, 4, 5, 6, 7, 8], 2)
-    //lista1 = [1, 2, 5, 6] e lista2 = [3, 4, 7, 8]
+    //Divide os itens da array de n em n entre as duas arrays
     let k = separar(b, n);
     
     let [lista1, lista2] = parEImpar(k);
     
+    let numeroAgrupamentos = conta(lista1, lista2)
+
     novaLista1 = subParaArray(lista1);
     novaLista2 = subParaArray(lista2);
+
+    let elementos = conta(novaLista1, novaLista2);
 
     let u1 = geraLista(novaLista1);
     let u2 = geraLista(novaLista2);
 
-    document.getElementById('lista1').innerHTML = `<span class="lista">Primeira lista:</span> ${u1}`;
-    document.getElementById('lista2').innerHTML = `<span class="lista">Segunda lista:</span> ${u2}`;
+    document.getElementById('lista1').innerHTML = `<span class="lista">Primeira lista:</span> ${u1} - (${numeroAgrupamentos[0]} grupos e ${elementos[0]} itens)`;
+    document.getElementById('lista2').innerHTML = `<span class="lista">Segunda lista:</span> ${u2} - (${numeroAgrupamentos[1]} grupos e ${elementos[1]} itens)`;
 }
 
 function receberDados(e){
@@ -78,11 +83,12 @@ function receberDados(e){
     if(lista == ''){
         alert('A sequencia está vazia')
     }
-    if(numero == '' || numero < 0){
+    else if(numero == '' || numero < 0){
         alert('Numero inválido!');
     }
-    sequencia(lista, numero)
+    else sequencia(lista, numero)
 }
 
+//INTERAÇÃO COM A DOM
 const botao = document.getElementById('botao');
 botao.addEventListener('click', receberDados);
