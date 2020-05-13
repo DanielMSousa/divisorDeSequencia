@@ -2,47 +2,125 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: rgb(46, 46, 46);
+    color: #fff;
     font-family: 'Roboto Slab', serif;
 }
-h1, h2{
-    margin-bottom: 1.5%;
+
+h1{
+    font-size: 2.3em;
+    margin-bottom: 24px;
+    margin-top: 16px;
+    text-align: center;
 }
-p, li{
-    font-size: 1.1em;
+
+p{
+    font-size: 1.5em;
     text-indent: 15px;
     margin: 1.1%;
-    line-height: 1.5em;
-    text-align: justify;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 36px;
 }
+
 body{
-    background-color: #dadaf2;
+    background-color: #EBB0FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 70%;
-    margin: 0 auto;
-    background-color: #F5F5F5;
-    padding: 1% 5%;
-    min-height: 100vh;
+    min-height: 30%;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 input, button{
-    font-size: 1.1em;
+    display: block;
+    font-size: 1.5em;
     padding: 0.5%;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 12px;
 }
-section{
-    margin: 25px 0;
+
+input{
+    padding: 15px;
+    border: 1px solid #eee;
 }
+
+input:first-child{
+    width: 140%;
+}
+
 button{
-    cursor: pointer;
     font-weight: bold;
+    background-color: #DC75FF;
+    border: none;
+    border-radius: 10px;
+    min-width: 149px;
+    min-height: 85px;
+    font-size: 28px;
+    padding: 15px;
+    color: #fff;
+    margin-top: 12px;
+    transition: 1s;
 }
+
+button:hover{
+    cursor: pointer;
+    filter: brightness(0.9);
+    transition: 1s;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+.listaSec{
+    background-color: rgba(0,0,0,0.3);
+    width: 49vw;
+    margin-right: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .lista{
     text-decoration: underline;
 }
+
 #lista1, #lista2{
     font-size: 1.3em;
     font-weight: bold;
+    margin-bottom: 5px;
 }
+
+#dados1, #dados2{
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.copia{
+    font-size: 1.2em;
+    min-height: auto;
+    min-width: auto;
+    padding: 5px;
+    margin-top: 6px;
+}
+
 @media screen and (max-width: 960px){
     main{
         width: 100%;
