@@ -125,4 +125,12 @@ section{
     main{
         width: 100%;
     }
+    
+    input{
+        width: 70%;
+    }
+
+    input:first-child{
+        width: 90%;
+    }
 }
